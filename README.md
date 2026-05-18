@@ -1,69 +1,112 @@
-🏠 Um por Todos
-Sistema desenvolvido para facilitar o controle e a divisão de despesas compartilhadas entre moradores de uma casa, apartamento ou república.
-O objetivo é garantir uma divisão justa e transparente das contas, calculando automaticamente quanto cada morador deve pagar com base no número de pessoas na residência.
+# 🏠 Racha-Conta — Despesas de República
 
-📋 Funcionalidades
-👥 Gestão de Moradores
+Sistema desenvolvido para gerenciamento e divisão de despesas entre moradores de repúblicas, apartamentos e casas compartilhadas.
 
-Cadastro de moradores da casa
+O objetivo do projeto é facilitar o controle financeiro coletivo, automatizando cálculos de divisão de contas e oferecendo transparência entre os moradores.
 
-Edição e remoção de moradores
+# 📌 Funcionalidades
+ * ✅ Cadastro de moradores
+ * ✅ Registro de despesas
+ * ✅ Divisão automática de contas
+ * ✅ Controle de quem pagou
+ * ✅ Relatório de balanço financeiro
+ * ✅ Controle de dívidas quitadas
 
-Controle de perfis de acesso:
+# 👥 Perfis do Sistema
+>🧑 Morador
 
-Morador
+Pode:
 
-Administrador da Casa
+ * Visualizar despesas;
+ * Consultar dívidas;
+ * Acompanhar pagamentos;
+ * Visualizar balanço financeiro.
 
+>🛠️ Administrador da Casa
 
+Pode:
 
-💸 Controle de Despesas
+ * Cadastrar moradores;
+ * Registrar despesas;
+ * Gerenciar pagamentos;
+ * Visualizar relatórios gerais.
 
-Registro de despesas compartilhadas
+# ⚙️ Regra de Negócio
 
-Informações da despesa:
+Cada despesa cadastrada é dividida igualmente entre todos os moradores da casa.
 
-Valor
+Fórmula utilizada:
+Valor Individual = Valor Total / Quantidade de Moradores
 
-Tipo da despesa
+```bash
+Exemplo:
+Conta de água: R$ 200,00
+Moradores: 5
 
-Data
+Cada morador deve:
+R$ 40,00
+```
+# 🧩 Requisitos Funcionais
+ * Moradores
+ * Cadastro de moradores;
+ * Listagem de moradores;
+ * Remoção de moradores.
+ * Despesas
+ * Cadastro de despesas;
+ * Informar:
+ * valor;
+ * tipo;
+ * descrição;
+ * quem realizou o pagamento;
+ * Divisão automática da despesa.
+ * Dívidas
+ * Geração automática de débitos;
+ * Relatório de “quem deve para quem”;
+ * Marcação de dívida como paga.
+# 🗂️ Estrutura do Projeto
+src/
+ * ├── ..../
+ * ├── ..../
+ * ├── ..../
+ * ├── ..../
+ * ├── ..../
+ * ├── ..../
+ * └── ..../
+ 
+# 🚀 Tecnologias Utilizadas
+ * Backend
+....
+ * Banco de Dados
+....
+ * Versionamento
+ 1. Git
+ 2. GitHub
 
-Responsável pelo pagamento
+# ▶️ Como Executar o Projeto
+....
 
+# 📊 Exemplo de Fluxo
+1. Administrador cadastra moradores;
+2. Uma despesa é registrada;
+3. O sistema divide automaticamente o valor;
+4. O balanço é atualizado;
+5. Moradores podem quitar dívidas.
 
+# 🧪 Possíveis Melhorias Futuras
+Integração com PIX;
+Dashboard financeiro;
+Histórico mensal;
+Login e autenticação;
+Notificações de cobrança;
+Aplicativo mobile.
 
-📊 Balanço Financeiro
+# 🤝 Desenvolvedores
 
-Relatório automático de:
+Projeto desenvolvido por:
 
-Quem pagou mais
+Victor
+Renan
 
-Quem está devendo
+# 📄 Licença
 
-Quem deve para quem
-
-
-Cálculo igualitário entre os moradores
-
-✅ Controle de Pagamentos
-
-Marcação de dívidas como pagas
-
-Histórico de pagamentos realizados
-
-
-🎯 Objetivo do Projeto
-O projeto busca simplificar a organização financeira em moradias compartilhadas, evitando conflitos e trazendo mais transparência para o controle das despesas coletivas.
-
-🛠️ Requisitos Funcionais
-
- Cadastro de moradores
-
- Cadastro de despesas
-
- Divisão automática de contas
-
- Relatório de balanço financeiro
-
- Controle de pagamentos de dívidas
+Este projeto está sob a licença MIT.
