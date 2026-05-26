@@ -1,0 +1,14 @@
+Requisitos Básicos de Negócio
+Os Requisitos de Negócio (RN) definem as regras e o escopo do que o sistema precisa fazer para entregar valor. Baseado na sua descrição, temos:
+
+RN01 - Gestão de Moradores: O sistema deve permitir a inclusão, visualização e exclusão de indivíduos que compartilham as despesas. Apenas moradores cadastrados podem ser associados a despesas e dívidas.
+
+RN02 - Registro de Despesas: O sistema deve registrar transações financeiras contendo obrigatoriamente: valor numérico, categoria/tipo, descrição e o identificador do morador que efetuou o pagamento.
+
+RN03 - Rateio Automático: Toda despesa inserida deve ter seu valor dividido automaticamente de forma igual entre todos os moradores ativos cadastrados no sistema.
+
+RN04 - Geração e Cruzamento de Débitos: O sistema deve calcular automaticamente a diferença entre o que cada morador pagou e o que ele consumiu (rateio), gerando um saldo positivo (credor) ou negativo (devedor).
+
+RN05 - Relatório de Acerto de Contas: O sistema deve gerar um fluxo de pagamentos otimizado ("quem deve para quem"), minimizando o número de transações necessárias para zerar os saldos de todos.
+
+RN06 - Baixa de Dívidas: O sistema deve permitir que um morador devedor ou credor marque uma pendência financeira específica como "paga", atualizando o saldo de ambos os envolvidos.
