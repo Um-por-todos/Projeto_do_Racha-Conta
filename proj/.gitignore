@@ -1,0 +1,65 @@
+# Maven
+/target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Java / Build
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+# IDEs
+/.idea/
+*.iml
+*.ipr
+*.iws
+/.classpath
+/.project
+/.settings/
+.vscode/
+*.code-workspace
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+*.log.*
+logs/
+
+# Environment
+.env
+.env.*
+application.properties.local
+application-local.properties
+application-dev.properties
+
+# Database
+*.db
+*.mv.db
+*.trace.db
+*.h2.db
+
+# Archives
+*.zip
+*.tar.gz
+*.rar

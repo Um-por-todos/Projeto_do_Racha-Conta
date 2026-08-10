@@ -1,0 +1,1 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head th:replace="~{fragments :: head('Casa')}"></head><body><nav th:replace="~{fragments :: nav}"></nav><div class="card"><h1 th:text="${casa.nome}"></h1><p th:text="${casa.endereco}"></p><h2>Moradores</h2><ul><li th:each="m:${moradores}" th:text="${m.nome}"></li></ul></div></body></html>

@@ -1,0 +1,3 @@
+package com.br.edu.iff.rachaconta.webproject.controller;
+import com.br.edu.iff.rachaconta.webproject.service.RelatorioFinanceiroService;import org.springframework.stereotype.Controller;import org.springframework.ui.Model;import org.springframework.web.bind.annotation.GetMapping;import org.springframework.web.bind.annotation.RequestMapping;
+@Controller @RequestMapping("/relatorio") public class RelatorioFinanceiroController{private final RelatorioFinanceiroService s;public RelatorioFinanceiroController(RelatorioFinanceiroService s){this.s=s;}@GetMapping public String relatorio(Model m){m.addAttribute("relatorio",s.gerar());m.addAttribute("dividas",s.pendentes());m.addAttribute("nome",(java.util.function.Function<Long,String>)s::nome);return "relatorio";}}

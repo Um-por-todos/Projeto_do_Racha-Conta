@@ -1,0 +1,1 @@
+<!DOCTYPE html><html xmlns:th="http://www.thymeleaf.org"><head th:replace="~{fragments :: head('Morador')}"></head><body><nav th:replace="~{fragments :: nav}"></nav><div class="card"><h1 th:text="${morador.nome}"></h1><p th:text="${morador.email}"></p><p>Ativo: <b th:text="${morador.ativo?'Sim':'Não'}"></b></p></div></body></html>
