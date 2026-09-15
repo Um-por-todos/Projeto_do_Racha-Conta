@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Editar casa')}"></head>
+<body>
+<nav th:replace="~{fragments :: nav}"></nav>
+<div class="card">
+    <h1>Editar casa</h1>
+    <form method="post" th:action="@{/casa/{id}(id=${casaId})}" th:object="${casaDTO}">
+        <label>Nome</label>
+        <input th:field="*{nome}">
+        <p class="field-error" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></p>
+
+        <label>Endereço</label>
+        <input th:field="*{endereco}">
+        <p class="field-error" th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}"></p>
+
+        <button class="btn">Salvar</button>
+    </form>
+</div>
+</body>
+</html>

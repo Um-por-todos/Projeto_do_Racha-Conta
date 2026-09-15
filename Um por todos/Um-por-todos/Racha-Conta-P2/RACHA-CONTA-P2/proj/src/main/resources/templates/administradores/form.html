@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Novo administrador')}"></head>
+<body>
+<nav th:replace="~{fragments :: nav}"></nav>
+<div class="card">
+    <h1>Novo administrador</h1>
+    <form method="post" th:action="@{/administradores}" th:object="${administradorDTO}">
+        <label>Nome</label>
+        <input th:field="*{nome}">
+        <p class="field-error" th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></p>
+
+        <label>E-mail</label>
+        <input th:field="*{email}" type="email">
+        <p class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+
+        <label>Nível de acesso</label>
+        <input th:field="*{nivelAcesso}">
+        <p class="field-error" th:if="${#fields.hasErrors('nivelAcesso')}" th:errors="*{nivelAcesso}"></p>
+
+        <button class="btn">Salvar</button>
+    </form>
+</div>
+</body>
+</html>
