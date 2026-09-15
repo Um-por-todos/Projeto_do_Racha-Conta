@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Editar despesa')}"></head>
+<body>
+<nav th:replace="~{fragments :: nav}"></nav>
+<div class="card">
+    <h1>Editar despesa</h1>
+
+    <form method="post" th:action="@{/despesas/{id}(id=${despesaId})}" th:object="${despesaDTO}">
+        <label>Valor total</label>
+        <input th:field="*{valorTotal}" type="number" step="0.01" min="0.01">
+        <p class="field-error" th:if="${#fields.hasErrors('valorTotal')}" th:errors="*{valorTotal}"></p>
+
+        <label>Descrição</label>
+        <input th:field="*{descricao}">
+        <p class="field-error" th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}"></p>
+
+        <label>Tipo</label>
+        <input th:field="*{tipo}">
+        <p class="field-error" th:if="${#fields.hasErrors('tipo')}" th:errors="*{tipo}"></p>
+
+        <label>Casa</label>
+        <select th:field="*{casaId}">
+            <option value="">Selecione</option>
+            <option th:each="c : ${casas}" th:value="${c.id}" th:text="${c.nome}"></option>
+        </select>
+        <p class="field-error" th:if="${#fields.hasErrors('casaId')}" th:errors="*{casaId}"></p>
+
+        <label>Pagador</label>
+        <select th:field="*{pagadorId}">
+            <option value="">Selecione</option>
+            <option th:each="m : ${moradores}" th:value="${m.id}" th:text="${m.nome}"></option>
+        </select>
+        <p class="field-error" th:if="${#fields.hasErrors('pagadorId')}" th:errors="*{pagadorId}"></p>
+
+        <label>Data</label>
+        <input th:field="*{data}" type="date">
+
+        <button class="btn">Salvar</button>
+    </form>
+</div>
+</body>
+</html>
